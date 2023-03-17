@@ -2,8 +2,13 @@
     background-color: $second-color;
     display: flex;
     justify-content: space-between;
+    padding: 20px 0 100px 0;
 }
 .footer__column {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: start;
 }
 .logo {
 }
@@ -22,25 +27,29 @@
 .form {
     display: flex;
     justify-content: space-between;
-
     width: 590px;
 
     &__column {
         display: flex;
+        // justify-content: space-between;
         flex-direction: column;
-        width: calc(50% - 20px);
+        width: calc(50% - 5px);
     }
-}
-.form__input {
-    height: 50px;
-    
-    
 
-    &:last-child {
-        // margin-right: 20px;
-        // align-self: flex-end
-    }
-    &_big {
-        height: 120px;
+
+    &__input {
+        height: 50px;
+        margin-bottom: 10px;
+        
+        
+    
+        &:last-child {
+            // margin-right: 20px;
+            // align-self: flex-end
+        }
+        &_big {
+            resize: none;
+            height: 110px;
+        }
     }
 }

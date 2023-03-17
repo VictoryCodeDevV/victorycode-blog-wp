@@ -1,0 +1,29 @@
+// breadcrumbs ---------------
+
+.breadcrumbs {
+    color: $text-black;
+    display: flex;
+
+
+    &__item {
+        margin-right: 10px;
+        display: block;
+
+    
+    }
+    &__link {
+    }
+    
+}
+
+.breadcrumb {
+    &:last-child {
+        color: $accent-color;
+
+        .breadcrumbs__link {
+            pointer-events: none; 
+            cursor: default; 
+        }
+    }
+    
+}
