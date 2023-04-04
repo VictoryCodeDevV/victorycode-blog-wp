@@ -134,3 +134,18 @@
 }
 
 
+
+
+
+@media screen and (max-width: 1200px) {
+    .cards__item {
+        flex: 0 1 calc(50% - 20px);
+    }
+	
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 320px) {
+}
