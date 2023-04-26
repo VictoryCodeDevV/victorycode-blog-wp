@@ -8,7 +8,7 @@
 
 // Переменные
 
-$font:    'Inter', 'Verdana', 'Arial', sans-serif;
+$font: 'Inter', 'Verdana', 'Arial', sans-serif;
 
 
 $back-color: #D9D9D9;
@@ -40,7 +40,7 @@ $box-shadow: 0px 0px 10px 5px rgba(34, 60, 80, 0.2);
 	margin: 0;
 
 	font-size: 14px;
-	color: $text-white;
+	color: $text-black;
 	font-weight: 400;
 	
 	line-height: 1.2em;
@@ -59,7 +59,12 @@ $box-shadow: 0px 0px 10px 5px rgba(34, 60, 80, 0.2);
 	&__container {
 		width: 100%;
 		max-width: 1600px;
-		background-color: #fff;
+		display: flex;
+		// background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 		
 	}
 }
@@ -88,7 +93,7 @@ ul, li{
 
 a, a:hover, a:active, a:visited{
 	text-decoration: none;
-	color: inherit
+	color: inherit;
 }
 
 a {
@@ -108,13 +113,11 @@ p{
 
 h1{
 	font-size: 60px;
-	color: $text-black;
 	font-weight: bold;
 }
 
 h2{
 	font-size: 18px;
-	color: $text-white;
 }
 
 img {
@@ -134,8 +137,8 @@ img {
 	background-color: $second-color;
 	width: 260px;
 	position: fixed;
-	border-right: 15px solid $second-color;
-	
+	// border-right: 15px solid $second-color;
+	left:0;
 }
 
 
@@ -144,23 +147,28 @@ img {
 @import '_header';
 
 .content {
-	margin-left: 260px;
-	// padding: 0 10px 0 30px;
-}
-
-
-
-.content {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
+	margin: 10px 20px;
+}
+
+.content_marginLeft {
+	margin-left: 260px;
+	// padding: 0 10px 0 30px;
 }
 
 .page {
-	&_margin {
-		margin: 30px 20px 50px 20px;
+	padding: 30px 20px 50px 20px;
+	background-color: #fff;
+
+	// &_margin {
+		
+	// }
+	&_article {
+		max-width: 800px;
 	}
 
 	&__title {
@@ -206,6 +214,9 @@ img {
 
 
 @media screen and (max-width: 1200px) {
+    .content_marginLeft {
+        margin-left: 0; 
+    } 
 	
 }
 @media screen and (max-width: 768px) {
