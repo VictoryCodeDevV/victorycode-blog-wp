@@ -1,6 +1,9 @@
 // NAV
 
 .nav {
+    background-color: $second-color;
+	width: 260px;
+	position: fixed;
     
 
 }
@@ -94,7 +97,7 @@
 
 @media screen and (max-width: 1200px) {
     // удалить меню   - затычка -
-    .aside {
+    .sidebar {
         display: none;
     }
 }

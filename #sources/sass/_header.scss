@@ -1,12 +1,16 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 78px;
-    color: $text-white;
-    align-items: stretch;
-    align-content: stretch;
-    background-color: $second-color;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 78px;
+        color: $text-white;
+        align-items: stretch;
+        align-content: stretch;
+        background-color: $second-color;
+        flex-direction: row;
+    }
+
 }
 .header__title {
     display: flex;

@@ -415,22 +415,6 @@ template {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-.body__container {
-  width: 100%;
-  max-width: 1600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
 
 section, form {
   overflow-x: hidden;
@@ -480,6 +464,27 @@ img {
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav {
+  background-color: #333333;
+  width: 260px;
+  position: fixed;
 }
 
 .nav__list {
@@ -566,19 +571,21 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .aside {
+  .sidebar {
     display: none;
   }
 }
-.aside {
-  height: 100%;
+.sidebar {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 260px;
+          flex: 0 0 260px;
+}
+.sidebar_bg-second-color {
   background-color: #333333;
-  width: 260px;
-  position: fixed;
-  left: 0;
 }
 
-.header {
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,6 +603,10 @@ img {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   background-color: #333333;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .header__title {
@@ -649,19 +660,17 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px 20px;
+  margin: 0 20px;
 }
 
-.content_marginLeft {
-  margin-left: 260px;
+.content_article {
+  margin: 10px 20px;
+  max-width: 800px;
 }
 
 .page {
   padding: 30px 20px 50px 20px;
   background-color: #fff;
-}
-.page_article {
-  max-width: 800px;
 }
 .page__title {
   margin-top: 15px;
@@ -672,7 +681,7 @@ img {
 .page__title:after {
   content: "";
   position: absolute;
-  width: 70%;
+  width: 4%;
   height: 2px;
   background-color: #CED305;
   bottom: -4px;
@@ -932,10 +941,4 @@ img {
 .form__input_big {
   resize: none;
   height: 110px;
-}
-
-@media screen and (max-width: 1200px) {
-  .content_marginLeft {
-    margin-left: 0;
-  }
 }
