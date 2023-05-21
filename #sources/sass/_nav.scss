@@ -4,11 +4,13 @@
     background-color: $second-color;
 	width: 260px;
 	position: fixed;
+
+    transition: all ease $transition-time;
     
 
 }
 .nav__list {
-    margin-top: 20px;
+    // margin-top: 20px;
 }
 
 .nav__logo {
@@ -96,9 +98,16 @@
 }
 
 @media screen and (max-width: 1200px) {
-    // удалить меню   - затычка -
-    .sidebar {
-        display: none;
+    .nav {
+        position: absolute;
+		left: 0;
+        top: 0;
+		transform: translateY(-100%);
+		z-index: 3;
+    }
+
+    .nav_visible {
+        transform: translate(0);
     }
 }
 @media screen and (max-width: 992px) {

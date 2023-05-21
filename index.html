@@ -10,10 +10,11 @@
     <title>Victorycode - </title>
 </head>
 <body class="body">
-    <aside class="sidebar sidebar_left sidebar_bg-second-color" id="menu">
-<nav class="sidebar_nav nav">
+    <aside class="sidebar sidebar-left sidebar_bg-second-color" id="menu">
+<nav id="mainMenu" class="sidebar_nav nav">
     <a href='#' class="nav__logo logo">
-        <i class="logo__icon icon-logo"></i>
+        <!-- <i class="logo__icon icon-logo"></i> -->
+        <img src="img/logo2.svg" alt="">
     </a>
     <ul class="nav__list nav-list">
         <li class="nav-list__item"><a href="about.html" class="nav-list__link">Обо мне</a></li>
@@ -41,6 +42,10 @@
             <li class="contacts__item"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
             <li class="contacts__item"><a href="#" class="contacts__link">Связаться со мной</a></li>
         </ul>
+
+        <button id="mainMenuBtn" class="menu-btn">
+            <span></span>
+        </button>
     </div>
 </header>  
 
@@ -54,7 +59,7 @@
 </ul>                <h1 class="page__title blog__title">Блог</h1>
                 <div class="cards blog__cards">
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -77,7 +82,7 @@
     </a>
 </div>
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -100,7 +105,7 @@
     </a>
 </div>
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -123,7 +128,7 @@
     </a>
 </div>
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -146,7 +151,7 @@
     </a>
 </div>
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -169,7 +174,7 @@
     </a>
 </div>
 <div class="cards__item card">
-    <a href='' class="card__inner">
+    <a href='шаблон.html' class="card__inner">
         <div class="card__img img-wrapper">
             <div class="card__img-overlay img-overlay">
                 <div class="img-overlay__text">
@@ -195,10 +200,10 @@
             
         </main>
 <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
         <div class="footer__column">
-            <div class="logo footer-column__item">
-                <img src="" alt="Victorycode" class="logo__img">
+            <div class="logo footer__logo footer-column__item">
+                <img src="img/logo2.svg" alt="Victorycode" class="logo__img">
             </div>
             <a href="tel:+79251280096" class="footer-column__item">+7(925) 128 00 96</a>
             <ul class="footer-column__item socials">
@@ -208,7 +213,7 @@
                 <li class="socials__item"><i class="">s</i></li>
             </ul>
         
-            <a href="" class="a footer-column__item"></a>
+            <a href="" class="a footer-column__item">dfdf</a>
         </div>
     
         <div class="footer__column">
@@ -229,7 +234,20 @@
             </form>
         </div>
         <div class="footer__column">
+            <div class="footer-column__item">
+                <p class="footer-column__title">
+                    Услуги
+                </p>
+                <ul class="footer-sitemap">
+                    <li class="footer-sitemap__item">О компании</li>
+                    <li class="footer-sitemap__item">О компании</li>
+                    <li class="footer-sitemap__item">О компании</li>
+                    <li class="footer-sitemap__item">О компании</li>
+                    <li class="footer-sitemap__item">О компании</li>
+                </ul>
+            </div>
         </div>
+        
     </div>
 </footer>
 
@@ -238,6 +256,8 @@
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
