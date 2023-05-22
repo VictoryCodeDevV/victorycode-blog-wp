@@ -97,18 +97,25 @@
 .logo {
 }
 
-@media screen and (max-width: 1200px) {
-    .nav {
-        position: absolute;
-		left: 0;
-        top: 0;
-		transform: translateY(-100%);
-		z-index: 3;
-    }
 
-    .nav_visible {
-        transform: translate(0);
-    }
+
+.nav_invisible {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    z-index: 3;
+}
+
+.nav_visible {
+    transform: translate(0);
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+
+    
 }
 @media screen and (max-width: 992px) {
     
