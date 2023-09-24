@@ -114,6 +114,7 @@ img {
 
 ul, ol {
 	list-style: none;
+	padding: 0;
 }
 
 .container {
@@ -150,8 +151,6 @@ ul, ol {
 	flex-direction: column;
 	justify-content: space-between;
 
-	margin-right: 20px;
-
 	flex: 1 1 auto;
 
 	align-items: center;
@@ -159,13 +158,18 @@ ul, ol {
 
 .content_article {
 	// margin: 0 20px;
+	margin: 0;
 	
 }
 
 .page {
 	flex: 1 1 auto;
 	padding: 30px 0 50px 0;
+	margin: 20px;
+
 	background-color: #fff;
+
+
 
 	&__title {
 		margin-top: 0.2em;
@@ -177,6 +181,7 @@ ul, ol {
 
 .page_article {
 	max-width: 800px;
+	margin: 20px;
 }
 
 .blog__title {
@@ -200,7 +205,7 @@ ul, ol {
 @import '_cards';
 
 
-
+@import '_pagination';
 
 // FOOTER
 
@@ -212,7 +217,7 @@ ul, ol {
 .content_article {
 	font-size: 18px;
 
-	p {
+	.paragraph {
 		margin-bottom: 20px;
 		line-height: 1.6em;
 	}
@@ -276,7 +281,10 @@ ul, ol {
 			}
 		}
 
-		li {
+		.article-list {
+			padding-left: 40px;
+		}
+		.article-list li {
 			// display: inline;
 			position: relative;
 			margin-bottom: 10px;
@@ -288,7 +296,7 @@ ul, ol {
 		}
 	
 	
-		ul li:before, ol li::before {
+		.article-list li:before, ol li::before {
 			position: absolute;
 			left: -35px;
 			top: -5px;
@@ -299,16 +307,16 @@ ul, ol {
 			align-items: center;
 			padding: 5px;
 		}
-		ul li::before {
+		.article-list li::before {
 			content: '—';
 			color: $accent-color;
 		}
 	
 		
-		ol {
+		ol.article-list {
 			counter-reset: list 0; 
 		}
-		ol li::before {
+		ol.article-list li::before {
 			counter-increment: list;
 			content: counter(list) '.';
 			position: absolute;
@@ -379,18 +387,27 @@ ul, ol {
 	}
 
 	.table-figure {
+		overflow: hidden;
+		margin-left: 10px;
+			width: calc(100% - 20px);
 		figcaption {
-			margin-left: 10px;
+			
 		}
 	}
 
 	.table {
+		margin-left: 0;
 		overflow-x: auto;
-		width: 100%;
+		// width: 100%;
 	
 		border: none;
 	
 		margin-bottom: 20px;
+
+
+		max-width: 100%;
+  display: inline-block;
+  overflow-x: auto;
 	
 	}
 	
@@ -407,6 +424,8 @@ ul, ol {
 		background: $accent-color;
 	
 		font-size: 14px;
+
+		min-width: 200px;
 	
 	}
 	
@@ -456,16 +475,22 @@ ul, ol {
 	
 }
 
-
-.sidebar-left_pos_absolute {
+.sidebar-left_always-invisible {
 	position: absolute;
-	left: 0;
-	top: 0;
+		left: 0;
+		top: 0;
 }
 
-
 @media screen and (max-width: 1200px) {
-	
+	.sidebar-left {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.page {
+		margin: 20px 0 20px 0;
+	}
 	
 }
 @media screen and (max-width: 768px) {
