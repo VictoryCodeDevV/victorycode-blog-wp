@@ -884,6 +884,23 @@ ul, ol {
   font-size: 18px;
   margin-bottom: 8px;
 }
+.contacts__link {
+  position: relative;
+}
+.contacts__link:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background-color: #CED305;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+.contacts__link:hover:after {
+  width: 100%;
+}
 
 @media screen and (max-width: 1200px) {
   .header {
