@@ -126,7 +126,15 @@
     &__item {
         font-size: 0.9rem;
         line-height: 1.3rem;
+        &:hover {
+            color: $accent-color;
+            transition: all ease $transition-time;
+        }
     }
+}
+
+.footer-sitemap__link {
+    padding: 1px;
 }
 
 

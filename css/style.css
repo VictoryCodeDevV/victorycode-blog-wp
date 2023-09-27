@@ -1411,6 +1411,15 @@ ul, ol {
   font-size: 0.9rem;
   line-height: 1.3rem;
 }
+.footer-sitemap__item:hover {
+  color: #CED305;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.footer-sitemap__link {
+  padding: 1px;
+}
 
 .copyright {
   text-align: center;
