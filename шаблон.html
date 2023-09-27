@@ -14,9 +14,10 @@
 <body class="body">
     <aside class="sidebar sidebar-left sidebar_bg-second-color" id="menu">
 <nav id="mainMenu" class="sidebar_nav nav">
-    <a href='#' class="nav__logo logo">
-        <!-- <i class="logo__icon icon-logo"></i> -->
-        <img src="img/logo2.svg" alt="">
+    <div class="nav-wrapper">
+        <a id='headerLogo' href='#' class="nav__logo logo">
+        <i class="logo__icon icon-logo"></i>
+        <!-- <img src="img/logo2.svg" alt=""> -->
     </a>
     <ul class="nav__list nav-list">
         <li class="nav-list__item"><a href="about.html" class="nav-list__link">Обо мне</a></li>
@@ -25,10 +26,11 @@
         <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Мои работы</a></li>
         <li class="nav-list__item"><a href="feedback.html" class="nav-list__link">Отзывы</a></li>
         <li class="nav-list__item nav-list__item_active"><a href="blog.html" class="nav-list__link">Блог</a></li>
-        <li class="nav-list__item"><a href="contacts.html" class="nav-list__link">Контакты</a></li>
+        <li class="nav-list__item"><span class="nav-list__link contacts-popup">Контакты</span></li>
         <li class="nav-list__item nav-list__item_active"><a href="price.html" class="nav-list__link">Узнать стоимость</a></li>
     </ul>
-</nav>   
+    </div>
+</nav>
 
 
     </aside>
@@ -37,12 +39,17 @@
     <div class="content content_article">
 <header class="header">
     <div class="container header__container">
+        <a id='headerLogo' href='#' class="header__logo logo">
+            <i class="logo__icon icon-logo"></i>
+            <!-- <img src="img/logo2.svg" alt=""> -->
+        </a>
+
         <div class="header__title">
             Web-developer
         </div>
         <ul class="contacts">
-            <li class="contacts__item"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
-            <li class="contacts__item"><a href="#" class="contacts__link">Связаться со мной</a></li>
+            <li class="contacts__item contacts__city"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
+            <li class="contacts__item"><a href="#" class="contacts__link contacts-popup">Связаться со мной</a></li>
         </ul>
 
         <button id="mainMenuBtn" class="menu-btn">
@@ -61,13 +68,13 @@
             	</ul>
             	<h1 class="page__title">Заголовок страницы</h1>
 				<section>
-					<p><a href="" class="blog__link">Текстовый блок </a> управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
-					<p>Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
-					<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает<br>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.</p>
-					<p>Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
-					<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает<br>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам.</p>
-					<p>Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
-					<p>Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
+					<p class="paragraph"><a href="" class="blog__link">Текстовый блок </a> управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
+					<p class="paragraph">Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
+					<p class="paragraph">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает<br>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.</p>
+					<p class="paragraph">Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
+					<p class="paragraph">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает<br>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам.</p>
+					<p class="paragraph">Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
+					<p class="paragraph">Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
 
 
 					<h2 class="page__title">Заголовок страницы</h2>
@@ -102,7 +109,7 @@
 						</ul>
 					</figure> -->
 
-					<p>Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст..</p>
+					<p class="paragraph">Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст..</p>
 					<h1>Заголовок Н1</h1>
 					<h2>Заголовок Н2</h2>
 					<h3>Заголовок Н3</h3>
@@ -257,11 +264,79 @@
 						</figcaption>
 					</figure>
 					
-					<p>Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст..</p>
-					<p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.</p>
+					<p class="paragraph">Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст..</p>
+					<p class="paragraph">Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения.</p>
 				</section>
 			</div>
 		</main>
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__column">
+            <div class="footer-column__item">
+                <p class="footer-column__title">
+                    <a href='#' class="logo footer__logo footer-column__item">
+                        <i class="logo__icon icon-logo"></i>
+                        <!-- <img src="img/logo2.svg" alt=""> -->
+                    </a>
+                </p>
+                
+                <a href="tel:+79251280096" class="footer-column__item">+7(925) 128 00 96</a>
+                <ul class="footer-column__item socials">
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-gmail"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-tg"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-vk"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-wp"></i></a></li>
+                </ul>
+            
+                <a href="" class="a footer-column__item">Отзывы</a>
+            </div>
+        </div>
+    
+        <div class="footer__column footer-column-with-form">
+            <p class="footer-column__item footer-column__title">
+                У вас остались вопросы? Пишите мне!
+            </p>
+            <form action="" class="form footer__form">
+                <div class="form__column">
+                    <input type="text" class="form__input" placeholder="Имя*">
+                    <input type="text" class="form__input" placeholder="Email*">
+                    <input type="text" class="form__input" placeholder="Телефон">
+                </div>
+                <div class="form__column">
+                    <textarea name="" id="" cols="30" rows="10" class="form__input form__input_big" placeholder="Сообщение"></textarea>
+                    <input type="submit" class="form__input form__submit">
+                </div>
+            
+            </form>
+        </div>
+        <div class="footer__column">
+            <div class="footer-column__item">
+                <p class="footer-column__title">
+                    Разделы
+                </p>
+                <ul class="footer-sitemap">
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Главная</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">О нас</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Услуги и цены</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Наши работы</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Блог</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Контакты</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Карта сайта</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container footer__container">
+        <div class="copyright footer__copyright">
+            VictoryCode. Все права защищены.
+        </div>
+    </div>
+</footer>
+
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

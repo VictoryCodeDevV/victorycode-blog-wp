@@ -12,9 +12,10 @@
 <body class="body">
     <aside class="sidebar sidebar-left sidebar_bg-second-color" id="menu">
 <nav id="mainMenu" class="sidebar_nav nav">
-    <a href='#' class="nav__logo logo">
-        <!-- <i class="logo__icon icon-logo"></i> -->
-        <img src="img/logo2.svg" alt="">
+    <div class="nav-wrapper">
+        <a id='headerLogo' href='#' class="nav__logo logo">
+        <i class="logo__icon icon-logo"></i>
+        <!-- <img src="img/logo2.svg" alt=""> -->
     </a>
     <ul class="nav__list nav-list">
         <li class="nav-list__item"><a href="about.html" class="nav-list__link">Обо мне</a></li>
@@ -23,10 +24,11 @@
         <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Мои работы</a></li>
         <li class="nav-list__item"><a href="feedback.html" class="nav-list__link">Отзывы</a></li>
         <li class="nav-list__item nav-list__item_active"><a href="blog.html" class="nav-list__link">Блог</a></li>
-        <li class="nav-list__item"><a href="contacts.html" class="nav-list__link">Контакты</a></li>
+        <li class="nav-list__item"><span class="nav-list__link contacts-popup">Контакты</span></li>
         <li class="nav-list__item nav-list__item_active"><a href="price.html" class="nav-list__link">Узнать стоимость</a></li>
     </ul>
-</nav>   
+    </div>
+</nav>
 
 
     </aside>
@@ -35,12 +37,17 @@
     
 <header class="header">
     <div class="container header__container">
+        <a id='headerLogo' href='#' class="header__logo logo">
+            <i class="logo__icon icon-logo"></i>
+            <!-- <img src="img/logo2.svg" alt=""> -->
+        </a>
+
         <div class="header__title">
             Web-developer
         </div>
         <ul class="contacts">
-            <li class="contacts__item"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
-            <li class="contacts__item"><a href="#" class="contacts__link">Связаться со мной</a></li>
+            <li class="contacts__item contacts__city"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
+            <li class="contacts__item"><a href="#" class="contacts__link contacts-popup">Связаться со мной</a></li>
         </ul>
 
         <button id="mainMenuBtn" class="menu-btn">
@@ -197,38 +204,57 @@
     </a>
 </div>
                 </div>
-            
+
+<div class="pagination-container wow zoomIn mar-b-1x" data-wow-duration="0.5s">
+
+	<ul class="pagination">
+		<li class="pagination-item--wide first"> <a class="pagination-link--wide first" href="#">Previous</a> </li>
+		<li class="pagination-item first-number"> <a class="pagination-link" href="#">1</a> </li>
+		<li class="pagination-item"> <a class="pagination-link" href="#">2</a> </li>
+		<li class="pagination-item is-active"> <a class="pagination-link" href="#">3</a> </li>
+		<li class="pagination-item"> <a class="pagination-link" href="#">4</a> </li>
+		<li class="pagination-item last-number"> <a class="pagination-link" href="#">5</a> </li>
+		<li class="pagination-item--wide last"> <a class="pagination-link--wide last" href="#">Next</a> </li>
+	</ul>
+
+</div>        
         </main>
 <footer class="footer">
     <div class="container footer__container">
         <div class="footer__column">
-            <div class="logo footer__logo footer-column__item">
-                <img src="img/logo2.svg" alt="Victorycode" class="logo__img">
+            <div class="footer-column__item">
+                <p class="footer-column__title">
+                    <a href='#' class="logo footer__logo footer-column__item">
+                        <i class="logo__icon icon-logo"></i>
+                        <!-- <img src="img/logo2.svg" alt=""> -->
+                    </a>
+                </p>
+                
+                <a href="tel:+79251280096" class="footer-column__item">+7(925) 128 00 96</a>
+                <ul class="footer-column__item socials">
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-gmail"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-tg"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-vk"></i></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-wp"></i></a></li>
+                </ul>
+            
+                <a href="" class="a footer-column__item">Отзывы</a>
             </div>
-            <a href="tel:+79251280096" class="footer-column__item">+7(925) 128 00 96</a>
-            <ul class="footer-column__item socials">
-                <li class="socials__item"><i class="">s</i></li>
-                <li class="socials__item"><i class="">s</i></li>
-                <li class="socials__item"><i class="">s</i></li>
-                <li class="socials__item"><i class="">s</i></li>
-            </ul>
-        
-            <a href="" class="a footer-column__item">dfdf</a>
         </div>
     
-        <div class="footer__column">
+        <div class="footer__column footer-column-with-form">
             <p class="footer-column__item footer-column__title">
                 У вас остались вопросы? Пишите мне!
             </p>
-            <form action="" class="form">
+            <form action="" class="form footer__form">
                 <div class="form__column">
-                    <input type="text" class="form__input" placeholder="Пишите">
-                    <input type="text" class="form__input" placeholder="Пишите">
-                    <input type="text" class="form__input" placeholder="Пишите">
+                    <input type="text" class="form__input" placeholder="Имя*">
+                    <input type="text" class="form__input" placeholder="Email*">
+                    <input type="text" class="form__input" placeholder="Телефон">
                 </div>
                 <div class="form__column">
-                    <textarea name="" id="" cols="30" rows="10" class="form__input form__input_big" placeholder="Пишите"></textarea>
-                    <input type="submit" class="form__input" placeholder="Пишите">
+                    <textarea name="" id="" cols="30" rows="10" class="form__input form__input_big" placeholder="Сообщение"></textarea>
+                    <input type="submit" class="form__input form__submit">
                 </div>
             
             </form>
@@ -236,18 +262,26 @@
         <div class="footer__column">
             <div class="footer-column__item">
                 <p class="footer-column__title">
-                    Услуги
+                    Разделы
                 </p>
                 <ul class="footer-sitemap">
-                    <li class="footer-sitemap__item">О компании</li>
-                    <li class="footer-sitemap__item">О компании</li>
-                    <li class="footer-sitemap__item">О компании</li>
-                    <li class="footer-sitemap__item">О компании</li>
-                    <li class="footer-sitemap__item">О компании</li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Главная</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">О нас</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Услуги и цены</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Наши работы</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Блог</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Контакты</a></li>
+                    <li class="footer-sitemap__item"><a href="#" class="sooter-sitemap__link">Карта сайта</a></li>
                 </ul>
             </div>
         </div>
         
+    </div>
+
+    <div class="container footer__container">
+        <div class="copyright footer__copyright">
+            VictoryCode. Все права защищены.
+        </div>
     </div>
 </footer>
 
@@ -256,6 +290,21 @@
 
         </div>
     </div>
+
+<div class="popup-wrapper">
+    <div class="popup">
+        <input id="popup__toggle" type="checkbox" />
+        <label class="popup__btn" for="popup__toggle">
+          <span></span>
+        </label>
+        <ul class="contacts-list">
+            <li class="contacts-list__item"><a href=" https://vk.com/autosuficiencia" class="contacts-list__link">VK: vk.com/autosuficiencia</a></li>
+            <li class="contacts-list__item"><a href="https://t.me/viktorwebdev" class="contacts-list__link">TG: @viktorwebdev</a></li>
+            <li class="contacts-list__item"><a href="https://wa.me/79375545603" class="contacts-list__link">WP: +7 937 554 56 03</a></li>
+            <li class="contacts-list__item"><a href="mailto:viktor.wbdev@gmail.com" class="contacts-list__link">Mail: viktor.wbdev@gmail.com</a></li>
+        </ul>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
