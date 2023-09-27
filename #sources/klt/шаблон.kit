@@ -12,11 +12,18 @@
 </head>
 
 <body class="body">
+    <aside class="sidebar sidebar-left sidebar_bg-second-color" id="menu">
+        <!-- @import nav.html -->
+    </aside>
+    
+    
     <div class="content content_article">
-        <main class="page">
+        <!-- @import header.html -->
+         
+        <main class="page page_article">
 			<div class="container">
             	<ul class="breadcrumbs">
-            	    <li class="breadcrumbs__item breadcrumb"><a href="" class="breadcrumbs__link">Главная</a></li>
+            	    <li class="breadcrumbs__item breadcrumb"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
             	    <span class="breadcrumbs__item"> / </span>
             	    <li class="breadcrumbs__item breadcrumb"><a href="" class="breadcrumbs__link">Блог</a></li>
             	</ul>
@@ -33,9 +40,6 @@
 
 					<h2 class="page__title">Заголовок страницы</h2>
 
-
-
-            	    <div class="read-more-btn"><a href="" title="" class="more">Смотреть подробнее</a></div>
 					<ul>
 						<li>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях.</li>
 						<li>Служащий для временного наполнения макета в публикациях или производстве веб-сайтов.</li>
@@ -77,19 +81,19 @@
 						<a href="вы" class="figure__item">
 							<img src="img/rubric1.jpg">
 							<figcaption>
-								<p>Название</p>
+								Название
 							</figcaption>
 						</a>
 						<a href="вы" class="figure__item">
 							<img src="img/rubric1.jpg">
 							<figcaption>
-								<p>Название</p>
+								Название
 							</figcaption>
 						</a>
 						<a href="вы" class="figure__item">
 							<img src="img/rubric1.jpg">
 							<figcaption>
-								<p>Название</p>
+								Название
 							</figcaption>
 						</a>
 
@@ -99,12 +103,14 @@
 
 					<h2 class="page__title">Заголовок страницы</h2>
 
-					<aside class="mod_citate">
-						<p>Текстовый блок управляется из сис. Админ. Текст может быть назначен на каждую страницу. Если текст не назначен конкретной странице то используется текст без связи со страницей. Можно использовать случайный выбор текстового бока если по критерию подходит несколько.</p>
-						<div class="avtgf">
-							<div class="text">Авраам Линкольн</div><div class="dotted"><div></div></div>
-						</div>
-					</aside>
+
+
+					<blockquote class="blockquote">
+						<p>От перца, верно, начинают всем перечить... От уксуса - куксятся, от горчицы - огорчаются, от лука - лукавят, от вина - винятся, а от сдобы - добреют. Как жалко, что никто об этом не знает... Всё было бы так просто! Ели бы сдобу и добрели!</p>
+						<cite>Льюис Кэрролл. Приключения Алисы в Стране чудес</cite>
+					</blockquote>
+
+
 
 					<h3 class="page__title">Заголовок страницы</h3>
 					<div class="h5">Полное название даной Таблицы</div>
@@ -224,6 +230,9 @@
 				</section>
 			</div>
 		</main>
-		<!-- @import footer.html -->
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
 </body>
