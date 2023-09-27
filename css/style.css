@@ -385,7 +385,6 @@ template {
 
 .icon-vk:before {
   content: "\e901";
-<<<<<<< HEAD
 }
 
 /* POPUP */
@@ -534,8 +533,6 @@ template {
   color: #000;
   padding: 5px;
   display: block;
-=======
->>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
 }
 
 /*Specification*/
@@ -1370,14 +1367,6 @@ ul, ol {
   width: 100%;
 }
 
-.socials__item {
-  padding: 5px;
-  margin-right: 10px;
-}
-.socials__item:last-child {
-  margin-right: 0;
-}
-
 .footer-column__title {
   font-size: 20px;
   margin-bottom: 20px;
@@ -1418,14 +1407,11 @@ ul, ol {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 .footer-sitemap__item {
   font-size: 0.9rem;
   line-height: 1.3rem;
 }
 
-=======
->>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
 .copyright {
   text-align: center;
   width: 100%;
@@ -1452,11 +1438,7 @@ ul, ol {
             flex-direction: column;
   }
   .footer__column:first-child {
-<<<<<<< HEAD
     margin-bottom: 35px;
-=======
-    margin-bottom: 30px;
->>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
   }
   .socials {
     -webkit-box-pack: start;
