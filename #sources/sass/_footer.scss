@@ -48,17 +48,25 @@
     justify-content: flex-start
 }
 .socials__item {
+<<<<<<< HEAD
     margin-right: 2px;
     font-size: 20px;
+=======
+    padding: 5px;
+    margin-right: 10px;
+>>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
 
     &:last-child {
         margin-right: 0;
     }
+<<<<<<< HEAD
 }
 
 .socials__link {
     position: relative;
     padding: 10px;
+=======
+>>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
     
 }
 
@@ -168,7 +176,11 @@
 
 
     .footer__column:first-child {
+<<<<<<< HEAD
         margin-bottom: 35px;
+=======
+        margin-bottom: 30px;
+>>>>>>> c2c14558f794d8e68f00ce18435c71c074e7779a
     }
 
     .socials {
