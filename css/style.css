@@ -346,8 +346,8 @@ template {
 /* ICOMOON */
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?r5yc5");
-  src: url("../fonts/icomoon.eot?r5yc5#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?r5yc5") format("truetype"), url("../fonts/icomoon.woff?r5yc5") format("woff"), url("../fonts/icomoon.svg?r5yc5#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?ndfv8l");
+  src: url("../fonts/icomoon.eot?ndfv8l#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ndfv8l") format("truetype"), url("../fonts/icomoon.woff?ndfv8l") format("woff"), url("../fonts/icomoon.svg?ndfv8l#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -370,21 +370,24 @@ template {
   content: "\e900";
 }
 
-.icon-gmail:before {
-  content: "\e904";
+.icon-vk:before {
+  content: "\e901";
+}
+
+.icon-tg:before {
+  content: "\e902";
 }
 
 .icon-wp:before {
   content: "\e903";
 }
 
-.icon-tg:before {
-  content: "\e902";
-  color: #f5f3ee;
+.icon-gmail:before {
+  content: "\e904";
 }
 
-.icon-vk:before {
-  content: "\e901";
+.icon-arrow:before {
+  content: "\e905";
 }
 
 /* POPUP */
@@ -662,6 +665,12 @@ ul, ol {
 .logo__icon {
   color: #fff;
   font-size: 70px;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.logo__icon:hover {
+  color: #CED305;
 }
 
 .nav-list {
@@ -1256,6 +1265,12 @@ ul, ol {
   text-decoration: none;
   color: #8b969c;
   padding: 1.1em 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pagination-link--wide:hover {
@@ -1264,7 +1279,8 @@ ul, ol {
 
 .pagination-link--wide.first:before,
 .pagination-link--wide.last:after {
-  font-family: "entypo";
+  font-family: "icomoon" !important;
+  content: "\e905";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -1276,12 +1292,14 @@ ul, ol {
 }
 
 .pagination-link--wide.first::before {
-  content: "\e765";
   margin-right: 0.5em;
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .pagination-link--wide.last::after {
-  content: "\e766";
+  content: "\e905";
   margin-left: 0.5em;
 }
 
@@ -1548,7 +1566,7 @@ ul, ol {
 }
 .content_article section ol.article-list li::before {
   counter-increment: list;
-  content: counter(list) ".";
+  content: counter(list);
   position: absolute;
   color: #fff;
   border-radius: 50%;

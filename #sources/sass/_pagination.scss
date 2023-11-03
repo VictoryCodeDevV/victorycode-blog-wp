@@ -63,6 +63,8 @@
 	text-decoration: none;
 	color: #8b969c;
 	padding: 1.1em 1.6em;
+	display: flex;
+	align-items: center;
 }
 
 .pagination-link--wide:hover {
@@ -71,7 +73,8 @@
 
 .pagination-link--wide.first:before,
 .pagination-link--wide.last:after {
-  font-family: 'entypo';
+	font-family: 'icomoon' !important;
+	content: "\e905";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -85,12 +88,14 @@
 }
 
 .pagination-link--wide.first::before {
-	content: "\E765";
+	
 	margin-right: 0.5em;
+	display: inline-block;
+	transform: rotate(180deg);
 }
 
 .pagination-link--wide.last::after {
-	content: "\E766";
+	content: "\e905";
 	margin-left: 0.5em;
 }
 

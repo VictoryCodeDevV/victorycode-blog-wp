@@ -145,6 +145,7 @@ ul, ol {
 }
 
 
+
 // HEADER
 
 @import '_header';
@@ -321,7 +322,7 @@ ul, ol {
 		}
 		ol.article-list li::before {
 			counter-increment: list;
-			content: counter(list) '.';
+			content: counter(list);
 			position: absolute;
 			color: $text-white;
 
@@ -496,6 +497,13 @@ ul, ol {
 	}
 	
 }
+
+@media screen and (max-width:800px) {
+	.content_article .table {
+		// margin-left: 150px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 576px) {

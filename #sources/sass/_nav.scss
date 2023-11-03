@@ -28,6 +28,12 @@
 .logo__icon {
 	color: $text-white;
 	font-size: 70px;
+  transition: all ease $transition-time;
+}
+
+.logo__icon:hover {
+	color: $accent-color;
+	
 }
 
 .nav-list {
