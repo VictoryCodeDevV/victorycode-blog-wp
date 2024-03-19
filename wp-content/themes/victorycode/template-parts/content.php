@@ -1,43 +1,38 @@
 <?php
 /**
- * Template part for displaying posts
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package VictoryCode
+ * @package victorycodev1.0
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				victorycode_posted_on();
-				victorycode_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php victorycode_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
+<div class="page">
+	<div class="container page__container">
+		<aside class="page-sidebar">
+			<?php dynamic_sidebar( "PageLeftSidebar" ); ?>
+		</aside>
+		<main class="article">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs__item breadcrumb"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+				<span class="breadcrumbs__item"> / </span>
+				<li class="breadcrumbs__item breadcrumb"><a href="" class="breadcrumbs__link">Блог</a></li>
+			</ul>
+			<h1 class="page__title"><?php the_title() ?></h1>
+			<section>
+			<?php
 		the_content(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'victorycode' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'victorycodev1-0' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,14 +45,18 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'victorycode' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'victorycodev1-0' ),
 				'after'  => '</div>',
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+			</section>
+			<?php the_time('F jS, Y'); ?>
+		</main>
+		<aside class="page-sidebar">
+			<?php dynamic_sidebar( "PageRightSidebar" ); ?>
+		</aside>
+	</div>
+</div>
 
-	<footer class="entry-footer">
-		<?php victorycode_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+

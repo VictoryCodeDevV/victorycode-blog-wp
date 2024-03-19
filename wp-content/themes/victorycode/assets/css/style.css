@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*normolize*/ /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*normolize*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -770,7 +771,7 @@ ul, ol {
 @media screen and (max-width: 1200px) {
   .nav {
     left: 0;
-    top: 84px;
+    top: 116px;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     z-index: 3;

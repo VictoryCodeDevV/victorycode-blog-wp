@@ -6,54 +6,45 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package VictoryCode
+ * @package victorycodev1.0
  */
 
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Место для SEO метатегов -->
 
-	<?php wp_head(); ?>
+
+    <?php wp_head();?>
 </head>
+<body class="body">
+    
+    <?php get_sidebar() ?>
+    <?php dynamic_sidebar( "fjdkfjdkfjdkfj" ); ?>
+    <div class="content">
+    
+<header class="header">
+    <div class="container header__container">
+        <a id='headerLogo' href='<?php echo home_url()?>' class="header__logo logo">
+            <i class="logo__icon icon-logo"></i>
+            <!-- <img src="img/logo2.svg" alt=""> -->
+        </a>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'victorycode' ); ?></a>
+        <div class="header__title">
+            Web-developer
+        </div>
+        
+        <ul class="contacts">
+            <li class="contacts__item contacts__city"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
+            <li class="contacts__item"><a href="#" class="contacts__link contacts-popup">Связаться со мной</a></li>
+        </ul>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$victorycode_description = get_bloginfo( 'description', 'display' );
-			if ( $victorycode_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $victorycode_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'victorycode' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+        <button id="mainMenuBtn" class="menu-btn">
+            <span></span>
+        </button>
+    </div>
+</header>  
