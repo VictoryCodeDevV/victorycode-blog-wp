@@ -197,7 +197,7 @@ get_header();
 	</div>
 	<div class="pagination-container wow zoomIn mar-b-1x" data-wow-duration="0.5s">
 		<ul class="pagination">
-        <?php the_posts_pagination(); ?>
+        <?php wp_paginate('title='); ?>
 			<!-- <li class="pagination-item--wide first"> <a class="pagination-link--wide first" href="#">Previous</a> </li>
 			<li class="pagination-item first-number"> <a class="pagination-link" href="#">1</a> </li>
 			<li class="pagination-item"> <a class="pagination-link" href="#">2</a> </li>

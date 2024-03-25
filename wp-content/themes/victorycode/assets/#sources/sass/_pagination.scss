@@ -16,27 +16,23 @@
     line-height: 24px;
 }
 
-.pagination-item {
+.wp-paginate li {
 	display: inline-block;
 	border-right: 1px solid #d7dadb;
 
 	transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
-}
 
-.pagination-item:hover,
-.pagination-item.is-active {
-	background-color: $second-color;
-	border-right: 1px solid #fff;
-	.pagination-link {
-		color: #fff;
+	&:last-child {
+		border-right: none;
 	}
 }
 
-.pagination-item.first-number {
-  border-left: 1px solid #d7dadb;
+
+
+.wp-paginate {
 }
 
-.pagination-link {
+.wp-paginate .page {
 	padding: 1.1em 1.6em;
 	display: inline-block;
 	text-decoration: none;
@@ -45,31 +41,47 @@
 	transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
 }
 
-.pagination-item--wide {
+.wp-paginate .next,
+.wp-paginate .prev {
 	//@extend .pagination-item;
 	list-style-type: none;
 	display: inline-block;
+	// font-size: 20px;
 }
 
-.pagination-item--wide.first {
+.wp-paginate .prev {
 	margin: 0 1em 0 0;
 }
 
-.pagination-item--wide.last {
+.wp-paginate .next {
 	margin: 0 0 0 1em;
 }
 
-.pagination-link--wide {
+.wp-paginate .next,
+.wp-paginate .prev {
 	text-decoration: none;
-	color: #8b969c;
+	// color: #8b969c;
 	padding: 1.1em 1.6em;
 	display: flex;
 	align-items: center;
 }
 
-.pagination-link--wide:hover {
+.wp-paginate .next:hover,
+.wp-paginate .prev:hover {
 	color: $accent-color;
 }
+
+
+.wp-paginate li:hover,
+.pagination__current-item {
+	background-color: $second-color;
+	border-right: 1px solid #fff;
+	.current {
+		color: #fff;
+	}
+}
+
+
 
 .pagination-link--wide.first:before,
 .pagination-link--wide.last:after {
@@ -129,8 +141,6 @@
 	}
 	.pagination-item--wide .first::before, .pagination-item--wide .last::after {
 		font-size: 10px;
-
-
 	}
 }
 @media screen and (max-width: 320px) {
