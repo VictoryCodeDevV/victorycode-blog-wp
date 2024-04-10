@@ -7,8 +7,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -535,8 +533,13 @@ template {
 
 .contacts-list__link {
   color: #000;
+  line-height: 1.1em;
   padding: 5px;
   display: block;
+}
+
+.contacts-list__link-inner {
+  margin-left: 8px;
 }
 
 /*Specification*/
@@ -573,11 +576,7 @@ template {
 }
 
 section, form {
-  overflow-x: hidden;
-}
-
-.div, p, form, input, a, span, button {
-  /*box-sizing: border-box;*/
+  overflow: hidden;
 }
 
 a, a:hover, a:active, a:visited {
@@ -597,12 +596,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size: 60px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 18px;
+  margin-top: 20px;
 }
 
 img {
@@ -768,10 +766,20 @@ ul, ol {
   left: 0;
 }
 
+#menu-item-65 {
+  background-color: #CED305;
+  color: #111;
+}
+#menu-item-65:hover {
+  background-color: #333333;
+  border: 2px #fff solid;
+  color: #fff;
+}
+
 @media screen and (max-width: 1200px) {
   .nav {
     left: 0;
-    top: 116px;
+    top: 84px;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     z-index: 3;
@@ -845,6 +853,9 @@ ul, ol {
 
 .header__logo {
   display: none;
+}
+.header__logo .logo__icon {
+  color: #CED305;
 }
 
 .contacts {
@@ -963,8 +974,16 @@ ul, ol {
   position: relative;
 }
 
+.site-main {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .blog__container {
   background-color: #fff;
+  padding-top: 15px;
 }
 
 .page-sidebar {
@@ -986,10 +1005,15 @@ ul, ol {
   max-width: 800px;
 }
 .article__title {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-  position: relative;
-  display: inline-block;
+  font-size: 34px;
+  margin: 20px 0 15px 0;
+}
+.article p:not(.breadcrumbs) a {
+  color: #CED305;
+}
+
+p {
+  font-size: 17px;
 }
 
 .blog__title {
@@ -1006,49 +1030,44 @@ ul, ol {
 }
 
 .breadcrumbs {
+  margin: 0;
+}
+
+.breadcrumbs span {
   color: #111;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 0;
+  line-height: 1.1em;
 }
-.breadcrumbs__item {
-  margin-right: 10px;
-  display: block;
+.breadcrumbs span span {
+  margin: 0 10px 0 10px;
+  display: inline;
 }
-.breadcrumb:last-child {
+.breadcrumbs span span a {
+  display: inline;
+}
+.breadcrumbs span span:first-child {
+  margin-left: 0;
+}
+.breadcrumbs span span:last-child {
+  margin-right: 0;
+}
+.breadcrumbs span .breadcrumb_last {
   color: #CED305;
-}
-.breadcrumb:last-child .breadcrumbs__link {
-  pointer-events: none;
-  cursor: default;
 }
 
 .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 20px 32% 20px 32%;
+  grid-template-columns: 32% 32% 32%;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-}
-.cards__item {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 calc(33.333% - 20px);
-          flex: 0 1 calc(33.333% - 20px);
-}
-.cards__item:nth-child(3n) {
-  margin-right: 0;
-}
-.cards__item:nth-last-child(-n+3) {
-  margin-bottom: 0;
 }
 
 .img-overlay {
@@ -1102,7 +1121,6 @@ ul, ol {
   transition: all 0.2s ease;
   background-color: #333333;
   border: 4px solid #333333;
-  max-width: 500px;
   color: #fff;
 }
 .card__img {
@@ -1139,15 +1157,17 @@ ul, ol {
   transition: all 0.2s ease;
 }
 .card__title {
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.card__description {
-  margin-bottom: 20px;
+.card p {
+  margin-bottom: 10px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  line-height: 1.3em;
 }
 .card__date {
   font-weight: 600;
@@ -1170,37 +1190,19 @@ ul, ol {
 }
 
 @media screen and (max-width: 1200px) {
-  .cards__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 20px);
-            flex: 0 1 calc(50% - 20px);
-    font-size: 15px;
-  }
-  .cards__item:nth-child(3n) {
-    margin-right: 20px;
-  }
-  .cards__item:nth-child(2n) {
-    margin-right: 0;
-  }
-  .cards__item:nth-last-child(3) {
-    margin-bottom: 20px;
-  }
-  .card__description {
-    font-size: 12px;
+  .cards {
+    -ms-grid-columns: 49% 49%;
+    grid-template-columns: 49% 49%;
   }
 }
 @media screen and (max-width: 768px) {
+  .cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
   .cards__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
-    margin-right: 0;
-  }
-  .cards__item:nth-child(3n) {
-    margin-right: 0;
-  }
-  .cards__item:nth-last-child(2) {
-    margin-bottom: 20px;
+    width: 100%;
   }
   .card {
     background-color: #fff;
@@ -1239,12 +1241,36 @@ ul, ol {
 
 .wp-paginate li {
   display: inline-block;
-  border-right: 1px solid #d7dadb;
+}
+.wp-paginate li:not(.li-prev, .li-next) {
   -webkit-transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
           transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
 }
-.wp-paginate li:last-child {
+.wp-paginate li:first-child {
   border-right: none;
+}
+
+.gap {
+  padding: 1.1em 1.6em;
+  display: inline-block;
+  text-decoration: none;
+  color: #8b969c;
+}
+
+.pagination {
+  margin-bottom: 85px;
+}
+
+.wp-paginate {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wp-paginate .page {
@@ -1260,14 +1286,7 @@ ul, ol {
 .wp-paginate .prev {
   list-style-type: none;
   display: inline-block;
-}
-
-.wp-paginate .prev {
-  margin: 0 1em 0 0;
-}
-
-.wp-paginate .next {
-  margin: 0 0 0 1em;
+  color: #8b969c;
 }
 
 .wp-paginate .next,
@@ -1287,18 +1306,21 @@ ul, ol {
   color: #CED305;
 }
 
-.wp-paginate li:hover,
+.wp-paginate li:not(.li-prev, .li-next, li:has(.gap)):hover,
 .pagination__current-item {
   background-color: #333333;
-  border-right: 1px solid #fff;
 }
-.wp-paginate li:hover .current,
+.wp-paginate li:not(.li-prev, .li-next, li:has(.gap)):hover *,
+.pagination__current-item * {
+  color: #fff;
+}
+.wp-paginate li:not(.li-prev, .li-next, li:has(.gap)):hover .current,
 .pagination__current-item .current {
   color: #fff;
 }
 
-.pagination-link--wide.first:before,
-.pagination-link--wide.last:after {
+.prev:before,
+.next:after {
   font-family: "icomoon" !important;
   content: "\e905";
   speak: none;
@@ -1311,37 +1333,32 @@ ul, ol {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.pagination-link--wide.first::before {
+.prev::before {
   margin-right: 0.5em;
   display: inline-block;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.pagination-link--wide.last::after {
-  content: "\e905";
+.next::after {
   margin-left: 0.5em;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .pagination-container {
     font-size: 10px;
     line-height: 20px;
   }
-  .pagination-item.first-number {
-    border-left: none;
+}
+@media screen and (max-width: 768px) {
+  .li-prev,
+  .li-next {
+    width: 100%;
   }
-  .pagination-item.last-number {
-    border-right: none;
-  }
-  .pagination-item--wide .first, .pagination-item--wide .last {
-    font-size: 0px;
-  }
-  .pagination-item--wide .first::before, .pagination-item--wide .last::before {
-    font-size: 10px;
-  }
-  .pagination-item--wide .first::before, .pagination-item--wide .last::after {
-    font-size: 10px;
+  .wp-paginate .prev,
+  .wp-paginate .next {
+    display: inline;
+    line-height: 3.3em;
   }
 }
 .footer {
@@ -1512,56 +1529,60 @@ ul, ol {
 .article {
   font-size: 18px;
 }
-.article p {
+
+p {
   line-height: 1.6em;
   text-align: left;
   font-size: 18px;
-  margin: 16px 20px;
+  margin-bottom: 10px;
 }
-.article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-}
-.article h1 {
+
+h1 {
   font-size: 35px;
 }
-.article h2 {
-  font-size: 30px;
-}
-.article h3 {
+
+h2 {
   font-size: 25px;
 }
-.article h4 {
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
   font-size: 20px;
 }
-.article h5 {
+
+h5 {
   font-size: 15px;
 }
-.article h6 {
+
+h6 {
   font-size: 10px;
 }
-.article section a {
+
+section a {
   display: inline;
   position: relative;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
   color: #CED305;
 }
-.article section a:hover {
+section a:hover {
   color: #333333;
 }
-.article section ul, .article section ol {
+section ul, section ol {
   padding-left: 40px;
 }
-.article section li {
+section li {
   position: relative;
   margin-bottom: 10px;
   line-height: 1.2em;
 }
-.article section li:last-child {
+section li:last-child {
   margin-bottom: 0;
 }
-.article section ul li:before, .article section ol li::before {
+section ul li:before, section ol li::before {
   position: absolute;
   left: -35px;
   top: -5px;
@@ -1578,14 +1599,14 @@ ul, ol {
           align-items: center;
   padding: 5px;
 }
-.article section ul li::before {
+section ul li::before {
   content: "—";
   color: #CED305;
 }
-.article section ol {
+section ol {
   counter-reset: list 0;
 }
-.article section ol li::before {
+section ol li::before {
   counter-increment: list;
   content: counter(list);
   position: absolute;
@@ -1593,11 +1614,11 @@ ul, ol {
   border-radius: 50%;
   background-color: #CED305;
 }
-.article section .wp-block-code {
+section .wp-block-code {
   max-width: calc(100vw - 120px);
   height: auto;
 }
-.article section .wp-block-code code {
+section .wp-block-code code {
   overflow-x: auto;
   overflow-y: hidden;
   display: block;
@@ -1606,13 +1627,13 @@ ul, ol {
   max-width: 100%;
   height: auto;
 }
-.article .arcticle__figure {
+section .arcticle__figure {
   margin: 0 0 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.article .figure__item {
+section .figure__item {
   margin: 0 5px;
   word-break: break-all;
   width: 100%;
@@ -1620,11 +1641,11 @@ ul, ol {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
 }
-.article figcaption {
+section figcaption {
   text-align: center;
   font-size: 15px;
 }
-.article .blockquote {
+section .wp-block-quote {
   position: relative;
   padding: 16px 24px;
   margin: 16px 16px 26px 16px;
@@ -1632,7 +1653,7 @@ ul, ol {
   border-top: 2px solid #CED305;
   border-bottom: 2px solid #CED305;
 }
-.article .blockquote::after {
+section .wp-block-quote::after {
   font-family: Times, sans-serif;
   font-weight: bold;
   position: absolute;
@@ -1644,19 +1665,19 @@ ul, ol {
   right: 30px;
   text-shadow: 2px 0 0 #CED305, -2px 0 0 #CED305, 0 2px 0 #CED305, 0 -2px 0 #CED305, 1px 1px #CED305, -1px -1px 0 #CED305, 1px -1px 0 #CED305, -1px 1px 0 #CED305;
 }
-.article .blockquote cite {
+section .wp-block-quote cite {
   color: #CED305;
   font-size: 15px;
   padding-top: 20px;
   display: block;
   max-width: calc(100% - 100px);
 }
-.article .table-figure {
+section .table-figure {
   overflow: hidden;
   margin-left: 10px;
   width: calc(100% - 20px);
 }
-.article .table {
+section .table {
   margin-left: 0;
   overflow-x: auto;
   border: none;
@@ -1665,7 +1686,7 @@ ul, ol {
   display: inline-block;
   overflow-x: auto;
 }
-.article .table thead th {
+section .table thead th {
   font-weight: bold;
   text-align: left;
   border: none;
@@ -1674,26 +1695,26 @@ ul, ol {
   font-size: 14px;
   min-width: 200px;
 }
-.article .table thead tr th:first-child {
+section .table thead tr th:first-child {
   border-radius: 8px 0 0 0;
 }
-.article .table thead tr th:last-child {
+section .table thead tr th:last-child {
   border-radius: 0 8px 0 0;
 }
-.article .table tbody td {
+section .table tbody td {
   text-align: left;
   border: none;
   padding: 10px 15px;
   font-size: 14px;
   vertical-align: top;
 }
-.article .table tbody tr:nth-child(even) {
+section .table tbody tr:nth-child(even) {
   background: #f3f3f3;
 }
-.article .table tbody tr td:first-child {
+section .table tbody tr td:first-child {
   border-radius: 8px 0 0 8px;
 }
-.article .table tbody tr td:last-child {
+section .table tbody tr td:last-child {
   border-radius: 0 8px 8px 0;
 }
 
@@ -1703,16 +1724,60 @@ ul, ol {
   top: 0;
 }
 
+.post-links {
+  padding-top: 30px;
+  margin-top: 60px;
+  border-top: 1px solid #d7dadb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.post-links a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+.post-links a:last-child {
+  text-align: right;
+}
+.post-links a:hover {
+  color: #CED305;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media screen and (max-width: 1200px) {
   .sidebar-left {
     position: absolute;
     left: 0;
     top: 0;
   }
-  .page {
+  .blog__container {
+    margin: 84px 0 20px 0;
+  }
+  .page__container {
     margin: 84px 0 20px 0;
   }
   .page-sidebar {
     display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .article__title {
+    font-size: 30px;
+  }
+  .page {
+    padding: 0;
+  }
+  .article {
+    margin: 0;
+  }
+  section .wp-block-quote {
+    line-height: 1.3em;
   }
 }

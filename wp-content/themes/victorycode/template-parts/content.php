@@ -16,16 +16,14 @@
 
 <div class="page">
 	<div class="container page__container">
-		<aside class="page-sidebar">
+		<!-- <aside class="page-sidebar">
 			<?php dynamic_sidebar( "PageLeftSidebar" ); ?>
-		</aside>
+		</aside>  -->
 		<main class="article">
-			<ul class="breadcrumbs">
-				<li class="breadcrumbs__item breadcrumb"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
-				<span class="breadcrumbs__item"> / </span>
-				<li class="breadcrumbs__item breadcrumb"><a href="" class="breadcrumbs__link">Блог</a></li>
-			</ul>
-			<h1 class="page__title"><?php the_title() ?></h1>
+
+			<?php get_breadcrumbs() ?>
+	
+			<h1 class="article__title"><?php the_title() ?></h1>
 			<section>
 			<?php
 		the_content(
@@ -52,10 +50,15 @@
 		?>
 			</section>
 			<?php the_time('F jS, Y'); ?>
+
+			<div class="post-links">
+				<?php previous_post_link('%link') ?>
+				<?php next_post_link('%link') ?>
+			</div>
 		</main>
-		<aside class="page-sidebar">
-			<?php dynamic_sidebar( "PageRightSidebar" ); ?>
-		</aside>
+		<!-- <aside class="page-sidebar"> -->
+			<!-- <?php dynamic_sidebar( "PageRightSidebar" ); ?> -->
+		<!-- </aside> -->
 	</div>
 </div>
 

@@ -374,9 +374,9 @@ if (!class_exists('WPPaginate')) {
                   $prevlink = rtrim($prevlink, '/');      
                   $contains_param = (strpos($prevlink, '?') !== false) ? true : false;                        
                   if($slash_option && !$contains_param)
-                    $output .= sprintf('<li><a href="%s/" class="prev" aria-label="' . esc_html__('Go to previous page', 'wp-paginate') . '">Предыдущая %s</a></li>', $prevlink, stripslashes($previouspage));
+                    $output .= sprintf('<li class="li-prev"><a href="%s/" class="prev" aria-label="' . esc_html__('Go to previous page', 'wp-paginate') . '">Предыдущая</a></li>', $prevlink, stripslashes($previouspage));
                   else
-                    $output .= sprintf('<li><a href="%s" class="prev" aria-label="' . esc_html__('Go to previous page', 'wp-paginate') . '">Предыдущая %s</a></li>', $prevlink, stripslashes($previouspage));
+                    $output .= sprintf('<li class="li-prev"><a href="%s" class="prev" aria-label="' . esc_html__('Go to previous page', 'wp-paginate') . '">Предыдущая</a></li>', $prevlink, stripslashes($previouspage));
                 }
 
                 $min_links = $range * 2 + 1;
@@ -416,9 +416,9 @@ if (!class_exists('WPPaginate')) {
                   $nextlink = rtrim($nextlink, '/');      
                   $contains_param = (strpos($nextlink, '?') !== false) ? true : false;      
                   if($slash_option && !$contains_param)
-                    $output .= sprintf('<li><a href="%s/" class="next" aria-label="' . esc_html__('Go to next page', 'wp-paginate') . '">Следующая %s</a></li>', $nextlink, stripslashes($nextpage));
+                    $output .= sprintf('<li class="li-next"><a href="%s/" class="next" aria-label="' . esc_html__('Go to next page', 'wp-paginate') . '">Следующая</a></li>', $nextlink, stripslashes($nextpage));
                   else
-                    $output .= sprintf('<li><a href="%s" class="next" aria-label="' . esc_html__('Go to next page', 'wp-paginate') . '">Следующая %s</a></li>', $nextlink, stripslashes($nextpage));
+                    $output .= sprintf('<li class="li-next"><a href="%s" class="next" aria-label="' . esc_html__('Go to next page', 'wp-paginate') . '">Следующая</a></li>', $nextlink, stripslashes($nextpage));
                 }
                 $output .= "</ol>";
             }

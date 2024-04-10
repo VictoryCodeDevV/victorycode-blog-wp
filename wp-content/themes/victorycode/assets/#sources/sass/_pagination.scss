@@ -1,11 +1,3 @@
-// Import icon font, I've used Entypo (http://entypo.com/)
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
-// Import Roboto font
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
-
-
 .pagination-container {
 	margin-top: 1em;
 	padding-top: 2em;
@@ -16,20 +8,40 @@
     line-height: 24px;
 }
 
+
+
 .wp-paginate li {
 	display: inline-block;
-	border-right: 1px solid #d7dadb;
 
-	transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+	&:not(.li-prev, .li-next) {
+		transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
 
-	&:last-child {
+	}
+
+	&:first-child {
 		border-right: none;
 	}
 }
 
+.gap {
+	padding: 1.1em 1.6em;
+  	display: inline-block;
+  text-decoration: none;
+  color: #8b969c;
+}
 
+.pagination {
+	margin-bottom: 85px;
+}
+
+.navigation {
+}
 
 .wp-paginate {
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .wp-paginate .page {
@@ -43,19 +55,15 @@
 
 .wp-paginate .next,
 .wp-paginate .prev {
-	//@extend .pagination-item;
 	list-style-type: none;
 	display: inline-block;
-	// font-size: 20px;
+	color: #8b969c;
 }
 
 .wp-paginate .prev {
-	margin: 0 1em 0 0;
 }
 
-.wp-paginate .next {
-	margin: 0 0 0 1em;
-}
+
 
 .wp-paginate .next,
 .wp-paginate .prev {
@@ -72,10 +80,11 @@
 }
 
 
-.wp-paginate li:hover,
-.pagination__current-item {
+.wp-paginate li:not(.li-prev, .li-next, li:has(.gap)):hover,
+.pagination__current-item
+ {
 	background-color: $second-color;
-	border-right: 1px solid #fff;
+	* {color: #fff;}
 	.current {
 		color: #fff;
 	}
@@ -83,8 +92,8 @@
 
 
 
-.pagination-link--wide.first:before,
-.pagination-link--wide.last:after {
+.prev:before,
+.next:after {
 	font-family: 'icomoon' !important;
 	content: "\e905";
   speak: none;
@@ -99,49 +108,40 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.pagination-link--wide.first::before {
-	
+.prev::before {
 	margin-right: 0.5em;
 	display: inline-block;
 	transform: rotate(180deg);
 }
 
-.pagination-link--wide.last::after {
-	content: "\e905";
+.next::after {
 	margin-left: 0.5em;
+}
+
+
+@media screen and (max-width: 992px) {
+	.pagination-container {
+		font-size: 10px;
+		line-height: 20px;
+	}
 }
 
 
 
 @media screen and (max-width: 768px) {
+	.li-prev,
+	.li-next {
+		width: 100%;		
+	}
+	.wp-paginate .prev,
+	.wp-paginate .next {
+		display: inline;
+		line-height: 3.3em;
+	}
 }
 @media screen and (max-width: 576px) {
 
-	.pagination-container {
-		font-size: 10px;
-		line-height: 20px;
-	}
 
-	.pagination-item.first-number {
-
-		border-left: none;
-	}
-
-	.pagination-item.last-number {
-		border-right: none;
-	}
-
-	.pagination-item--wide .first, .pagination-item--wide .last {
-		font-size: 0px;
-
-		&::before {
-			font-size: 10px;
-		}
-
-	}
-	.pagination-item--wide .first::before, .pagination-item--wide .last::after {
-		font-size: 10px;
-	}
 }
 @media screen and (max-width: 320px) {
 }

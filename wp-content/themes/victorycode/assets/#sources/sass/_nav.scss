@@ -162,6 +162,19 @@
 }
 
 
+// Узнать стоимость
+#menu-item-65 {
+  background-color: $accent-color;
+  color: $text-black;
+  
+
+  &:hover {
+    background-color: $second-color;
+    border: 2px #fff solid;
+    color: #fff;
+  }
+}
+
 
 
 
@@ -170,7 +183,7 @@
 @media screen and (max-width: 1200px) {
     .nav {
 		left: 0;
-        top: 116px;
+        top: 84px;
 		transform: translateX(-100%);
 		z-index: 3;
     }

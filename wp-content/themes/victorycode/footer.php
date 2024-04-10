@@ -21,21 +21,25 @@
                         <!-- <img src="img/logo2.svg" alt=""> -->
                     </a>
                 </p>
+
+
+
                 
                 <a href="tel:+79251280096" class="footer-column__item">+7(925) 128 00 96</a>
-                <ul class="footer-column__item socials">
-                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-gmail"></i></a></li>
-                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-tg"></i></a></li>
-                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-vk"></i></a></li>
-                    <li class="socials__item"><a href="#" class="socials__link"><i class="icon-wp"></i></a></li>
-                </ul>
+                <?php echo wp_nav_menu(array(
+					 'theme_location' => 'social',
+					 'container' => '',
+					 'container_class' => '',
+					 'menu_class' => 'footer-column__item socials',
+                     'menu_id' => 'socialsMenu',
+				 )); ?>
             
                 <a href="" class="a footer-column__item">Отзывы</a>
             </div>
         </div>
     
         <div class="footer__column footer-column-with-form">
-            <p class="footer-column__item footer-column__title">
+            <!-- <p class="footer-column__item footer-column__title">
                 У вас остались вопросы? Пишите мне!
             </p>
             <form action="" class="form footer__form">
@@ -49,7 +53,7 @@
                     <input type="submit" class="form__input form__submit">
                 </div>
             
-            </form>
+            </form> -->
         </div>
         <div class="footer__column">
             <div class="footer-column__item">
@@ -88,12 +92,13 @@
         <label class="popup__btn" for="popup__toggle">
           <span></span>
         </label>
-        <ul class="contacts-list">
-            <li class="contacts-list__item"><a href=" https://vk.com/autosuficiencia" class="contacts-list__link">VK: vk.com/autosuficiencia</a></li>
-            <li class="contacts-list__item"><a href="https://t.me/viktorwebdev" class="contacts-list__link">TG: @viktorwebdev</a></li>
-            <li class="contacts-list__item"><a href="https://wa.me/79375545603" class="contacts-list__link">WP: +7 937 554 56 03</a></li>
-            <li class="contacts-list__item"><a href="mailto:viktor.wbdev@gmail.com" class="contacts-list__link">Mail: viktor.wbdev@gmail.com</a></li>
-        </ul>
+        <?php echo wp_nav_menu(array(
+					 'theme_location' => 'social',
+					 'container' => '',
+					 'container_class' => '',
+					 'menu_class' => 'contacts-list',
+                     'menu_id' => 'socialPopup',
+				 )); ?>
     </div>
 </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

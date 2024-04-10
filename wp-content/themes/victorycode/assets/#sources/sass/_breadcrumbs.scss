@@ -1,29 +1,38 @@
 // breadcrumbs ---------------
 
+
+
 .breadcrumbs {
-    color: $text-black;
-    display: flex;
-    padding: 0;
-
-    &__item {
-        margin-right: 10px;
-        display: block;
-
-    
-    }
-    &__link {
-    }
-    
+    margin: 0;
 }
 
-.breadcrumb {
-    &:last-child {
-        color: $accent-color;
+.breadcrumbs span {
+    color: $text-black;
+    padding: 0;
+    line-height: 1.1em;
 
-        .breadcrumbs__link {
-            pointer-events: none; 
-            cursor: default; 
+    span {
+        margin: 0 10px 0 10px;
+        display: inline;
+        a {
+            display: inline;
+        }
+        
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        &:last-child {
+            margin-right: 0;
         }
     }
+
+
+    .breadcrumb_last {
+        color: $accent-color;
+    }
     
 }
+
+

@@ -118,6 +118,11 @@
 
 .contacts-list__link {
     color: #000;
+    line-height: 1.1em;
     padding: 5px;
     display: block;
+}
+
+.contacts-list__link-inner {
+    margin-left: 8px;
 }

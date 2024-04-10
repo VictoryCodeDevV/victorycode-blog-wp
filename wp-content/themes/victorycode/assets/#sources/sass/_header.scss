@@ -10,7 +10,6 @@
         min-height: 84px;
         color: $text-white;
         align-items: center;
-        // align-content: stretch;
         
         flex-direction: row;
     }
@@ -27,7 +26,11 @@
 
 .header__logo {
     display: none;
+    .logo__icon {
+      color: $accent-color;
+    }
   }
+
 
 .contacts {
     display: flex;
@@ -36,8 +39,7 @@
     justify-content: end;
     align-items: center;
     padding: 5px 20px;
-    // margin: 0;
-    
+
     &__item {
         font-size: 15px;
         padding: 0 5px;
@@ -112,6 +114,7 @@
   .header__title {
     display: none;
   }
+
     
 }
 

@@ -20,6 +20,8 @@ function theme_scripts() {
 function theme_register_nav_menu() {
 	register_nav_menu( 'nav', 'Основное меню' );
 	register_nav_menu( 'footerNav', 'Меню в подвале' );
+
+	register_nav_menu( 'social', 'Соцсети' );
 }
 
 function custom_site() {
@@ -57,12 +59,26 @@ function register_my_widgets(){
 		'before_sidebar' => '', // WP 5.6
 		'after_sidebar'  => '', // WP 5.6
 	));
-
-	
-
-
-	
 }
+
+// Breadcrumbs
+
+function get_breadcrumbs() {
+	if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( ' <p id="breadcrumbs" class="breadcrumbs"> ', '</p>');}
+}
+
+
+function custom_excerpt_length($excerpt){
+	$characters = 160; // Количество символов
+	if (strlen($excerpt) > $characters) {
+		return substr($excerpt, 0, strpos($excerpt, ' ', $characters));
+	}
+	return $excerpt;
+}
+
+add_filter('the_excerpt', 'custom_excerpt_length');
+
+
 
 
 // register_sidebar( array(
@@ -90,3 +106,5 @@ function register_my_widgets(){
 	// 	'before_sidebar' => '', // WP 5.6
 	// 	'after_sidebar'  => '', // WP 5.6
 	// ) );
+
+
