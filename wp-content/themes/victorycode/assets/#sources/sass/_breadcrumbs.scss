@@ -1,0 +1,38 @@
+// breadcrumbs ---------------
+
+
+
+.breadcrumbs {
+    margin: 0;
+}
+
+.breadcrumbs span {
+    color: $text-black;
+    padding: 0;
+    line-height: 1.1em;
+
+    span {
+        margin: 0 10px 0 10px;
+        display: inline;
+        a {
+            display: inline;
+        }
+        
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    .breadcrumb_last {
+        color: $accent-color;
+    }
+    
+}
+
+

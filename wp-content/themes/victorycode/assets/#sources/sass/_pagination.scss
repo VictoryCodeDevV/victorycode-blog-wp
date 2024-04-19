@@ -1,0 +1,147 @@
+.pagination-container {
+	margin-top: 1em;
+	padding-top: 2em;
+	border-top: 1px solid #d7dadb;
+	text-align: center;
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+
+.wp-paginate li {
+	display: inline-block;
+
+	&:not(.li-prev, .li-next) {
+		transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+
+	}
+
+	&:first-child {
+		border-right: none;
+	}
+}
+
+.gap {
+	padding: 1.1em 1.6em;
+  	display: inline-block;
+  text-decoration: none;
+  color: #8b969c;
+}
+
+.pagination {
+	margin-bottom: 85px;
+}
+
+.navigation {
+}
+
+.wp-paginate {
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.wp-paginate .page {
+	padding: 1.1em 1.6em;
+	display: inline-block;
+	text-decoration: none;
+	color: #8b969c;
+
+	transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
+}
+
+.wp-paginate .next,
+.wp-paginate .prev {
+	list-style-type: none;
+	display: inline-block;
+	color: #8b969c;
+}
+
+.wp-paginate .prev {
+}
+
+
+
+.wp-paginate .next,
+.wp-paginate .prev {
+	text-decoration: none;
+	// color: #8b969c;
+	padding: 1.1em 1.6em;
+	display: flex;
+	align-items: center;
+}
+
+.wp-paginate .next:hover,
+.wp-paginate .prev:hover {
+	color: $accent-color;
+}
+
+
+.wp-paginate li:not(.li-prev, .li-next, li:has(.gap)):hover,
+.pagination__current-item
+ {
+	background-color: $second-color;
+	* {color: #fff;}
+	.current {
+		color: #fff;
+	}
+}
+
+
+
+.prev:before,
+.next:after {
+	font-family: 'icomoon' !important;
+	content: "\e905";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prev::before {
+	margin-right: 0.5em;
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+.next::after {
+	margin-left: 0.5em;
+}
+
+
+@media screen and (max-width: 992px) {
+	.pagination-container {
+		font-size: 10px;
+		line-height: 20px;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.li-prev,
+	.li-next {
+		width: 100%;		
+	}
+	.wp-paginate .prev,
+	.wp-paginate .next {
+		display: inline;
+		line-height: 3.3em;
+	}
+}
+@media screen and (max-width: 576px) {
+
+
+}
+@media screen and (max-width: 320px) {
+}

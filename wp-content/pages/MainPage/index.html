@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
+	<title>Обо мне</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="nav">
+				<input id="menu__toggle" type="checkbox"/>
+				<label class="menu__btn" for="menu__toggle">
+					<span></span>
+				</label>
+                <ul class="nav__list nav-list">
+                    <li class="nav-list__item"><a href="#home" class="nav-list-button">Главная</a></li>
+                    <li class="nav-list__item"><a href="#skills" class="nav-list-button">Навыки</a></li>
+                    <li class="nav-list__item"><span class="nav-list-button contacts-popup">Контакты</span></li>
+                    <li class="nav-list__item"><a href="#portfolio" class="nav-list-button">Портфолио</a></li>
+					<li class="nav-list__item"><a href="https://victory-code.ru/блог" class="nav-list-button">Блог</a></li>
+                </ul>
+            </nav>
+		</div>
+	</header>
+    <section class="me" id="home">
+        <div class="container me__container">
+            <h1 class="me__name _animate _animate-left">
+                Сорокин Виктор
+            </h1>
+            <p class="me__speciality _animate _animate-right">
+                Web Developer, Front-end Разработчик
+			</p>
+            <div class="me__photo photo">
+                <div class="me__photo-wrapper">
+                    <img src="img/me.jpg" alt="" class="my-photo">
+                </div>    
+            </div>
+			<div class="me__content">
+            	<ul class="me__socials social">
+            	    <li class="social__item"><a href="" class="social-item-button icon-vk"></a></li>
+            	    <li class="social__item"><a href="" class="social-item-button icon-tg"></a></li>
+            	    <li class="social__item"><a href="" class="social-item-button icon-wp"></a></li>   
+					<li class="social__item"><a href="" class="social-item-button icon-gmail"></a></li>   
+            	</ul>
+            	<p class="me__acquaintance _animate" >
+					Здравствуйте! Я frontend-разработчик.
+				</p>
+				<p class="me__acquaintance _animate" >
+					Моя специализация: создание и поддержка веб-сайтов. 
+				</p>
+				<p class="me__acquaintance _animate" >
+					А также завершение сайтов, оставленных прошлыми разработчиками;
+				</p>
+				<p class="me__acquaintance _animate" >
+					Основные направления моей работы:
+					Создание и поддержка веб-сайтов;
+					Кроссбраузерная и адаптивная вёрстка сайта;
+					Установка, настройка, редактирование CMS и плагинов к ним;
+					
+					Редизайн сайтов.
+
+					Если вам нужен сайт, вы всегда можете обратиться ко мне.
+					Буду рад помочь!
+				</p> 
+            	<div class="contact-button-wrapper">
+            	    <span class="contact-button contacts-popup">Связаться со мной</span>
+            	</div>
+			</div>
+        </div>
+    </section>
+
+
+    <section class="skills" id='skills'>
+		<div class="container">
+			<h2 class="skills__title _animate _animate-left _anim-no-hide">Мои Навыки</h2> 
+        	<div class="skills__container">
+				<a href="https://ra4ina.github.io/Travel/" class="skills__img _animate _animate-left"></a>
+				<div class="skills__content skills-content">
+					<div class="skills-content__item skills-content__item1 _animate _animate-right _anim-no-hide">
+						<h3 class="skills-content__title">Более 2-х лет занимаюсь:</h3>
+						<ul class="skills-list">
+							<li class="skills-content__text">Адаптивной кроссбраузерной версткой</li>
+							<li class="skills-content__text">Адаптацией сайтов под мобильные устройства</li>
+							<li class="skills-content__text">Натяжкой верстки на WP и другие CMS</li>
+						</ul>
+						<p class="skills-content__text skills-text">
+							Главный приоритет для меня - это качество конечного результата. Полностью включаюсь в каждый проект, т. к. считаю, что каждый сайт уникален и любой из них вызывает у меня особый интерес.
+						</p>
+					</div>
+					<div class="skills-content__item skills-content__item2 _animate _animate-right _anim-no-hide">
+						<h3 class="skills-content__title">Мои скиллы:</h3>
+						<ul class="skills-content__text skills-list">
+							<li class="skills-list__item">HTML5</li>
+							<li class="skills-list__item">CSS3</li>
+							<li class="skills-list__item">SASS. SCSS</li>
+							<li class="skills-list__item">LESS</li>
+							<li class="skills-list__item">Bootstrap</li>
+							<li class="skills-list__item">JavaScript</li>
+							<li class="skills-list__item">JQuery</li>
+							<li class="skills-list__item">PUG</li>
+							<li class="skills-list__item">Prepros</li>
+							<li class="skills-list__item">Git и GitHub</li>
+							<li class="skills-list__item">WordPress</li>
+							<li class="skills-list__item">Tilda</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+
+    <section class="projects" id='portfolio'>
+		<div class="container">
+			<h2 class="projects__title _animate _animate-right _anim-no-hide">Мои Работы</h2>
+			<p class="projects__text _animate _animate-right">
+				Посмотреть файлы каждого из представленных проектов можно в <a href="">моем GitHub</a>
+			</p>
+			<div class="slider projects__content _animate" id="projects__content">
+				<div class="project">
+					<div class="project__img-wrapper">
+						<img src="img/micron.webp" alt="" class="project__img">
+						<div class="project__overlay">
+							<a href="https://ra4ina.github.io/micron/"><span>Узнать подробнее<span></a>
+						</div>
+					</div>
+					<div class="project__content">
+						<h3 class="project__title">Micron</h3>
+						<div class="project__theme"></div>
+					</div>
+				</div> 
+				<div class="project">
+					<div class="project__img-wrapper">
+						<img src="img/waxom.jpg" alt="" class="project__img">
+						<div class="project__overlay">
+							<a href="https://ra4ina.github.io/Waxom/" class=""><span>Узнать подробнее</span></a>
+						</div>
+					</div>
+					<div class="project__content">
+						<h3 class="project__title">Waxom</h3>
+						<div class="project__theme"></div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project__img-wrapper">
+						<img src="img/sparcle.jpg" alt="" class="project__img">
+						<div class="project__overlay">
+							<a href="https://ra4ina.github.io/Sparcle/" class=""><span>Узнать подробнее<span></a>
+						</div>
+					</div>
+					<div class="project__content">
+						<h3 class="project__title"> Sparcle</h3>
+						<div class="project__theme"></div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project__img-wrapper">
+						<img src="img/school.jpg" alt="" class="project__img">
+						<div class="project__overlay">
+							<a href="https://ra4ina.github.io/Sky/" class=""><span>Узнать подробнее<span></a>
+						</div>
+					</div>
+					<div class="project__content">
+						<h3 class="project__title">School</h3>
+						<div class="project__theme"> </div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project__img-wrapper">
+						<img src="img/traver.jpg" alt="" class="project__img">
+						<div class="project__overlay">
+							<a href="https://ra4ina.github.io/Travel/" class=""><span>Узнать подробнее<span></a>
+						</div>
+					</div>
+					<div class="project__content">
+						<h3 class="project__title">Travel</h3>
+						<div class="project__theme"></div>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project__img-wrapper">	
+						<div class="project__overlay _always-show">
+							<a href="https://github.com/Ra4inA" class=""><span>Увидеть больше моих работ <br> Можно тут<span></a>
+						</div>
+					</div>
+					<div class="project__content">
+					</div>
+				</div>
+			</div>
+			<div class="contact-button-wrapper contact-button-wrapper_fullsize">
+				<span class="contact-button contact-button_fullsize contacts-popup">Связаться со мной</span>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="container">
+			© Виктор Сорокин
+		</div>
+	</footer>
+
+
+	<div class="popup-wrapper">
+		<div class="popup">
+			<input id="popup__toggle" type="checkbox" />
+			<label class="popup__btn" for="popup__toggle">
+			  <span></span>
+			</label>
+			<ul class="contacts-list">
+				<li class="contacts-list__item"><a href=" https://vk.com/autosuficiencia" class="contacts-list__link">VK: vk.com/autosuficiencia</a></li>
+				<li class="contacts-list__item"><a href="https://t.me/viktorwebdev" class="contacts-list__link">TG: @viktorwebdev</a></li>
+				<li class="contacts-list__item"><a href="https://wa.me/79375545603" class="contacts-list__link">WP: +7 937 554 56 03</a></li>
+				<li class="contacts-list__item"><a href="mailto:viktor.wbdev@gmail.com" class="contacts-list__link">Mail: viktor.wbdev@gmail.com</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
