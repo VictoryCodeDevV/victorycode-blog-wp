@@ -108,3 +108,39 @@ add_filter('the_excerpt', 'custom_excerpt_length');
 	// ) );
 
 
+// Шорткоды
+
+add_shortcode( 'contacts', 'contacts' );
+
+function contacts() {
+	
+	$menu_name = 'social';
+	$locations = get_nav_menu_locations();
+
+	if( $locations && isset( $locations[ $menu_name ] ) ){
+
+		// получаем элементы меню
+		$menu_items = wp_get_nav_menu_items( $locations[ $menu_name ] );
+
+		// создаем список
+		$menu_list = '<ul id="menu-' . $menu_name . '">';
+
+		foreach ( (array) $menu_items as $key => $menu_item ){
+			$menu_list .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . ': <br> ' . $menu_item->url . '</a></li>';
+		}
+
+		$menu_list .= '</ul>';
+	}
+	else {
+		$menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+	}
+
+	return $menu_list;
+}
+
+add_shortcode( 'contacts-popup', 'ContactsPopup' );
+
+function ContactsPopup() {
+	return '<a class="contacts-popup"> Связаться со мной </a>';
+}
+

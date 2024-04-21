@@ -37,6 +37,30 @@ get_header();
 			<h1 class="article__title"><?php the_title() ?></h1>
 			<section>
 			<?php
+
+			function get_ip()
+			{
+			    if (!empty($_SERVER['HTTP_CLIENT_IP']))
+			    {
+			        $ip=$_SERVER['HTTP_CLIENT_IP'];
+			    }
+			    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+			    {
+			        $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+			    }
+			    else
+			    {
+			        $ip=$_SERVER['REMOTE_ADDR'];
+			    }
+			    return $ip;
+			}
+			
+			$region = geoip_region_by_name(get_ip());
+			if ($region) {
+				print_r($region);
+			}
+			
+
 		the_content(
 			sprintf(
 				wp_kses(

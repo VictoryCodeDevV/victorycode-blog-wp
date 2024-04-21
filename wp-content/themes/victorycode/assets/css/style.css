@@ -766,11 +766,11 @@ ul, ol {
   left: 0;
 }
 
-#menu-item-65 {
+.nav-list .menu-item:last-child {
   background-color: #CED305;
   color: #111;
 }
-#menu-item-65:hover {
+.nav-list .menu-item:last-child:hover {
   background-color: #333333;
   border: 2px #fff solid;
   color: #fff;
@@ -1749,6 +1749,10 @@ section .table tbody tr td:last-child {
   color: #CED305;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#menu-social li a {
+  color: #111;
 }
 
 @media screen and (max-width: 1200px) {

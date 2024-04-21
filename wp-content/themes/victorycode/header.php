@@ -40,7 +40,7 @@
         
         <ul class="contacts">
             <li class="contacts__item contacts__city"><p class="contacts__location">г. Москва</p> <a href="tel:+79251280096" class="contacts__link">+7(925) 128 00 96</a></li>
-            <li class="contacts__item"><a href="#" class="contacts__link contacts-popup">Связаться со мной</a></li>
+            <li class="contacts__item"><a class="contacts__link contacts-popup">Связаться со мной</a></li>
         </ul>
 
         <button id="mainMenuBtn" class="menu-btn">

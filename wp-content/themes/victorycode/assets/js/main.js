@@ -86,7 +86,7 @@ function socialsPopupMenu_init() {
 
     socialLinks.map(a => {
         // Текст ссылки в иконку
-        a.innerHTML = `<i class=icon-${a.innerText}></i><span class="contacts-list__link-inner">${a.href.replace(/(http:\/\/|mailto:)/g, "")}</span>`;
+        a.innerHTML = `<i class=icon-${a.innerText}></i><span class="contacts-list__link-inner">${a.href.replace(/(https:\/\/|http:\/\/|mailto:)/g, "")}</span>`;
         // Навешиваю класс к <a>
         a.classList+="contacts-list__link";
         // Навешиваю класс к родителю <li>
