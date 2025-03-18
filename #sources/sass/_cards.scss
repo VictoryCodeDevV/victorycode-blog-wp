@@ -30,7 +30,7 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
-    background-color: rgba($color: #000, $alpha: 0.3);
+    background-color: rgba($color: $second-color, $alpha: 0.7);
     opacity: 0;
 
     &__text {
@@ -45,7 +45,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba($color: #000, $alpha: 0.7);
+        background-color: rgba($color: $second-color, $alpha: 0.7);
 
         &-span {
             font-size: 20px;
